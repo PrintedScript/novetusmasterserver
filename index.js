@@ -24,6 +24,7 @@ window.addEventListener('load', function() {
                 var ServerList = ServerListTemplate.cloneNode(true);
                 document.getElementsByClassName("container")[0].appendChild(ServerList);
                 var serverinfo = message.split('\n');
+                var servers = 0
                 for(var i = 0;i < serverinfo.length;i++){
                     var unparsedinfo = serverinfo[i];
                     var parsedinfo = atob(unparsedinfo).split('|');
@@ -50,7 +51,19 @@ window.addEventListener('load', function() {
                             location.href = evt.currentTarget.getAttribute("data-launchuri");
                         });
                         ServerList.appendChild(newserverobject);
+                        servers += 1;
                     }
+                }
+                
+                if (servers <= 0){
+                    var InfoTag = document.createElement("p")
+                    InfoTag.className = "servernametag"
+                    ServerList.appendChild(InfoTag)
+                    
+                    var Text = document.createElement("b")
+                    Text.className = "name"
+                    Text.textContent = "No servers are currently connected to this master server."
+                    InfoTag.appendChild(Text)
                 }
             },
     
