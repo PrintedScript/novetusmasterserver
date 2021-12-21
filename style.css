@@ -1,0 +1,183 @@
+.serverlist {
+    border-style: solid;
+    border-width: 2px;
+    height: fit-content;
+    min-height: 100px;
+    border-radius: 10px;
+    border-color: rgb(54, 54, 54);
+}
+
+.serverobject {
+    background-color: rgb(33, 33, 33);
+    height: fit-content;
+    padding: 8px;
+    border-radius: 3px;
+    margin: 8px;
+}
+
+.servernametag {
+    color: rgb(255,255,255);
+    font-size: 20px;
+}
+
+.serverinfoI {
+    color: rgb(186, 186, 186);
+}
+
+.serverinfoN {
+    color: rgb(255,255,255);
+    text-decoration: inherit;
+}
+
+.serverinfoN:hover {
+    color: rgb(255,255,255);
+    text-decoration: none; 
+    cursor: pointer;  
+}
+
+.novetuslauncher {
+    background-color: rgb(255, 59, 59);
+    color: rgb(255,255,255);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    font-weight: 700;
+}
+
+.refreshbutton {
+    background-color: rgb(131, 36, 255);
+    color: rgb(255,255,255);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 11%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 23%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 85%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 95%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 10%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 5%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+body {
+    background-color: #4e54c8;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
